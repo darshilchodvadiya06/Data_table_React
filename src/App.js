@@ -32,7 +32,7 @@ function App() {
             <th>Website</th>
           </tr>
         </thead>
-        {/* table data */}
+        {/* show table data in json fake api */}
         <tbody>
           {data.map(item => (
             <tr key={item.id}>
