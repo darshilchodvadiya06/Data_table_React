@@ -32,6 +32,7 @@ function App() {
             <th>Website</th>
           </tr>
         </thead>
+        {/* table data */}
         <tbody>
           {data.map(item => (
             <tr key={item.id}>
