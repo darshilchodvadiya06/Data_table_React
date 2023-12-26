@@ -20,19 +20,19 @@ function App() {
   }
 
   return (
-    <div>
-      <table id="data-table" border={1}>
+    <div className="container">
+      <h1>User Data</h1>
+      <table className="data-table">
         <thead>
           <tr>
             <th>User ID</th>
-            <th>Title</th>
-            <th>Body</th>
+            <th>Name</th>
+            <th>Username</th>
             <th>Email</th>
             <th>Phone</th>
             <th>Website</th>
           </tr>
         </thead>
-        {/* show table data in json fake api */}
         <tbody>
           {data.map(item => (
             <tr key={item.id}>
