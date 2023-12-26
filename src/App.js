@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const [data, setData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     fetchData();
@@ -19,9 +20,20 @@ function App() {
       });
   }
 
+  const filteredData = data.filter(user =>
+    user.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="container">
       <h1>User Data</h1>
+      <input
+        type="text"
+        placeholder="Search by name"
+        value={searchTerm}
+        onChange={e => setSearchTerm(e.target.value)}
+        className="search-input"
+      />
       <table className="data-table">
         <thead>
           <tr>
@@ -34,7 +46,7 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {data.map(item => (
+          {filteredData.map(item => (
             <tr key={item.id}>
               <td>{item.id}</td>
               <td>{item.name}</td>

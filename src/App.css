@@ -10,22 +10,31 @@
     color: #3498db; /* Primary color */
   }
   
+  .search-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
   .data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
   }
   
   .data-table th,
   .data-table td {
-    border: 1px solid #3498db; /* Primary color */
+    border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
   }
   
   .data-table th {
-    background-color: #3498db; /* Primary color */
-    color: white;
+    background-color: #f2f2f2;
+    color: #333;
   }
   
   .data-table tbody tr:nth-child(even) {
